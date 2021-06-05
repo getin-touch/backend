@@ -1,3 +1,5 @@
+import { join } from 'path';
+
 export default () => ({
   node_env: process.env.NODE_ENV,
 
@@ -25,6 +27,16 @@ export default () => ({
 
     logging: false,
     autoLoadEntities: true,
+  },
+
+  graphql: {
+    debug: true,
+    playground: true,
+    typePaths: ['./**/*.graphql'],
+    definitions: {
+      path: join(process.cwd(), 'src/graphqlTypes/graphql.schema.ts'),
+      outputAs: 'class',
+    },
   },
 
   jwt: {
