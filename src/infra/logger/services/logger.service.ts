@@ -7,7 +7,7 @@ import { Logger as WinstonLogger } from 'winston';
 import { ITransformableData } from '../interfaces';
 
 @Injectable({ scope: Scope.TRANSIENT })
-class LoggerService {
+export class LoggerService {
   private logger: WinstonLogger;
   private context: string;
 
@@ -118,5 +118,3 @@ class LoggerService {
     this.info(message);
   }
 }
-
-export default LoggerService;

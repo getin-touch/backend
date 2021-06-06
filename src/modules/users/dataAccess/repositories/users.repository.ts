@@ -2,10 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
-import { User } from '../entities';
+import { User } from '@modules/users/dataAccess/entities';
 
 @Injectable()
-class UsersRepository {
+export class UsersRepository {
   private readonly alias: string;
 
   constructor(
@@ -15,5 +15,3 @@ class UsersRepository {
     this.alias = 'user';
   }
 }
-
-export default UsersRepository;

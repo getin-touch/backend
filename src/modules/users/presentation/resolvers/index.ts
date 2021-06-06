@@ -1,1 +1,1 @@
-export { default } from './users.resolver';
+export { UsersResolver } from './users.resolver';

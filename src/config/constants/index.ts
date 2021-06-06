@@ -1,1 +1,1 @@
-export { CONFIG } from './config.constant';
+export { CONFIG, ENV_TYPES } from './config.constant';

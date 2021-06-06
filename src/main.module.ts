@@ -4,16 +4,20 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ConfigModule } from '@nestjs/config';
 import { ConfigService } from '@nestjs/config';
 
-import { CONFIG } from './config/constants';
-import configuration from './config';
+import { CONFIG, ENV_TYPES } from './config/constants';
+import { prodConf, devConf } from './config';
 import UsersModule from './modules/users/users.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      load: [configuration],
       cache: true,
+      load: [
+        process.env.NODE_ENV === ENV_TYPES.DEV
+          ? devConf
+          : prodConf
+      ],
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],

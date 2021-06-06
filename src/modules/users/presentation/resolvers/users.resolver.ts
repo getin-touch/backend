@@ -1,9 +1,9 @@
 import { Args, Mutation, Resolver } from '@nestjs/graphql';
 
-import UsersService from '../../services';
+import { UsersService } from '@modules/users/services';
 
 @Resolver('User')
-class UsersResolver {
+export class UsersResolver {
   constructor(private readonly usersService: UsersService) {}
 
   // add types
@@ -12,5 +12,3 @@ class UsersResolver {
     // return await this.usersService.signUp(args);
   }
 }
-
-export default UsersResolver;

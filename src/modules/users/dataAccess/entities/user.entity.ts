@@ -9,7 +9,7 @@ import {
 } from 'typeorm';
 
 @Entity({ name: 'users' })
-class User extends BaseEntity {
+export class User extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -45,5 +45,3 @@ class User extends BaseEntity {
     return bcrypt.compare(password, this.password);
   }
 }
-
-export default User;

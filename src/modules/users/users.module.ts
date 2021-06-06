@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import LoggerService from '@infra/logger/services';
-import UsersResolver from './presentation/resolvers';
-import UsersService from './services';
-import { User } from './dataAccess/entities';
-import { UsersRepository } from './dataAccess/repositories';
+import { User } from '@modules/users/dataAccess/entities';
+import { UsersRepository } from '@modules/users/dataAccess/repositories';
+import { UsersService } from '@modules/users/services';
+import { UsersResolver } from '@modules/users/presentation/resolvers';
+import { LoggerService } from '@infra/logger/services';
 
 @Module({
   imports: [
