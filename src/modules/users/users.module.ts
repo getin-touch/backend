@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import UsersController from './presentation/controllers';
+import UsersResolver from './presentation/resolvers';
 import UsersService from './services';
 import LoggerService from '../../infra/logger/services';
 import { User } from './dataAccess/entities';
@@ -11,8 +11,8 @@ import { UsersRepository } from './dataAccess/repositories';
   imports: [
     TypeOrmModule.forFeature([User]),
   ],
-  controllers: [UsersController],
   providers: [
+    UsersResolver,
     UsersService,
     UsersRepository, 
     LoggerService,
