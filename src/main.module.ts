@@ -36,6 +36,4 @@ import UsersModule from './modules/users/users.module';
     UsersModule,
   ],
 })
-class MainModule {}
-
-export default MainModule;
+export class MainModule {}

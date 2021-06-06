@@ -3,8 +3,8 @@ import * as os from 'os';
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe, Logger } from '@nestjs/common';
 
-import MainModule from '../main.module';
-import { ENV_TYPES } from '../config/constants';
+import { ENV_TYPES } from '@config/constants';
+import { MainModule } from '../main.module';
 
 class App {
   private readonly enginesLimit: number;
