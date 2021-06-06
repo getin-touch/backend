@@ -12,9 +12,10 @@
     "baseUrl": "./",
     "incremental": true,
     "paths": {
-      "@modules/*": ["modules/*"],
-      "@infra/*": ["infra/*"],
-      "@config/*": ["config/*"]
+      "@modules/*": ["src/modules/*"],
+      "@infra/*": ["src/infra/*"],
+      "@config/*": ["src/config/*"],
+      "@graphqlTypes/*": ["src/graphqlTypes/*"]
     }
   }
 }

@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import LoggerService from '@infra/logger/services';
 import UsersResolver from './presentation/resolvers';
 import UsersService from './services';
-import LoggerService from '../../infra/logger/services';
 import { User } from './dataAccess/entities';
 import { UsersRepository } from './dataAccess/repositories';
 

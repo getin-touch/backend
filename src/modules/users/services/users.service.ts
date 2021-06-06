@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import LoggerService from '../../../infra/logger/services';
+import LoggerService from '@infra/logger/services';
 import { UsersRepository } from '../dataAccess/repositories';
 
 @Injectable()
